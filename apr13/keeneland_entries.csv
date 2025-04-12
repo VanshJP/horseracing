@@ -1,0 +1,239 @@
+race_number,post_position,horse_name,jockey,trainer,weight,medication,morning_line_odds
+3,2,2,Citizen (KY),,5/G,L,"$30,000"
+3,3,3,Diver (KY),,4/G,L,"$30,000"
+3,4,4,Ky Thirty Won (NY),,5/G,L,"$30,000"
+3,5,5,Pastero (KY),,3/G,L,"$30,000"
+3,6,6,Batter Up (KY),,3/G,L,"$30,000"
+3,7,7,Nash Potatoes (KY),,3/C,L,"$30,000"
+3,8,8,Flyin Ryan (KY),,3/G,L,"$30,000"
+3,SCR,Heatontap (KY),,-------------------------------------Scratched-------------------------------------,7/2,,
+4,2,2,Citizen (KY),,5/G,L,"$30,000"
+4,3,3,Diver (KY),,4/G,L,"$30,000"
+4,4,4,Ky Thirty Won (NY),,5/G,L,"$30,000"
+4,5,5,Pastero (KY),,3/G,L,"$30,000"
+4,6,6,Batter Up (KY),,3/G,L,"$30,000"
+4,7,7,Nash Potatoes (KY),,3/C,L,"$30,000"
+4,8,8,Flyin Ryan (KY),,3/G,L,"$30,000"
+4,SCR,Heatontap (KY),,-------------------------------------Scratched-------------------------------------,7/2,,
+8,2,2,Cape Trafalgar (KY),,6/H,L,"$40,000"
+8,3,3,Pure Panic (KY),,6/G,L,"$40,000"
+8,4,4,Willtorun (KY),,6/G,L,"$40,000"
+8,5,5,Tagliatelle (KY),,4/G,L,"$40,000"
+8,6,6,Mr Bob (KY),,5/H,L,"$40,000"
+8,SCR,Tenebris (KY),,-------------------------------------Scratched-------------------------------------,12/1,,
+8,8,8,Shape Note (KY),,4/G,L,"$40,000"
+8,9,9,Regal Rey (KY),,5/G,L,"$40,000"
+8,10,10,Refuah (NY),,6/G,L,"$40,000"
+9,2,2,Cape Trafalgar (KY),,6/H,L,"$40,000"
+9,3,3,Pure Panic (KY),,6/G,L,"$40,000"
+9,4,4,Willtorun (KY),,6/G,L,"$40,000"
+9,5,5,Tagliatelle (KY),,4/G,L,"$40,000"
+9,6,6,Mr Bob (KY),,5/H,L,"$40,000"
+9,SCR,Tenebris (KY),,-------------------------------------Scratched-------------------------------------,12/1,,
+9,8,8,Shape Note (KY),,4/G,L,"$40,000"
+9,9,9,Regal Rey (KY),,5/G,L,"$40,000"
+9,10,10,Refuah (NY),,6/G,L,"$40,000"
+13,2,2,Eyes On Italy (KY),,3/F,L,C J Hernandez
+13,3,3,Lilium (KY),,3/F,L,C   Barbosa
+13,4,4,Shrewd Operator (KY),,3/F,L,D   Cohen
+13,5,5,Double Velocity (ON),,3/F,L,J L Ortiz
+13,6,6,Isle Be Ready (KY),,3/F,L,J   Rosario
+13,7,7,Grove City Sunset (KY),,3/F,L,J R Velazquez
+13,8,8,Bea Trix (KY),,3/F,L,L   Dettori
+13,9,9,Theravada (KY),,3/F,L,L   Saez
+13,10,10,Good Game (KY),,3/F,L,F   Prat
+13,11,11,Wedding Mood (IRE),,3/F,L,"I   Ortiz, Jr."
+13,12,12,Super Maxima (KY),,3/F,,J   Riquelme
+13,SCR,Oak Alley (KY),,------------------------------------Scratched-------------------------------------,4/1,,
+13,SCR,McKinzie River (KY),,------------------------------------Scratched-------------------------------------,30/1,,
+13,SCR,Strive for Honor (KY),,------------------------------------Scratched-------------------------------------,6/1,,
+13,SCR,Bit of Frost (KY),,------------------------------------Scratched-------------------------------------,8/1,,
+14,2,2,Eyes On Italy (KY),,3/F,L,C J Hernandez
+14,3,3,Lilium (KY),,3/F,L,C   Barbosa
+14,4,4,Shrewd Operator (KY),,3/F,L,D   Cohen
+14,5,5,Double Velocity (ON),,3/F,L,J L Ortiz
+14,6,6,Isle Be Ready (KY),,3/F,L,J   Rosario
+14,7,7,Grove City Sunset (KY),,3/F,L,J R Velazquez
+14,8,8,Bea Trix (KY),,3/F,L,L   Dettori
+14,9,9,Theravada (KY),,3/F,L,L   Saez
+14,10,10,Good Game (KY),,3/F,L,F   Prat
+14,11,11,Wedding Mood (IRE),,3/F,L,"I   Ortiz, Jr."
+14,12,12,Super Maxima (KY),,3/F,,J   Riquelme
+14,SCR,Oak Alley (KY),,------------------------------------Scratched-------------------------------------,4/1,,
+14,SCR,McKinzie River (KY),,------------------------------------Scratched-------------------------------------,30/1,,
+14,SCR,Strive for Honor (KY),,------------------------------------Scratched-------------------------------------,6/1,,
+14,SCR,Bit of Frost (KY),,------------------------------------Scratched-------------------------------------,8/1,,
+18,SCR,Sight (KY),,-------------------------------------Scratched-------------------------------------,12/1,,
+18,3,3,Goldbrick (KY),,4/G,L,"$80,000"
+18,4,4,Standard of Proof (KY),,5/G,L,"$80,000"
+18,5,5,Trade Imbalance (KY),,4/C,L,"$80,000"
+18,6,6,Frosty Indulgence (KY),,4/G,L,"$80,000"
+18,7,7,Honest Al (KY),,4/C,L,"$80,000"
+18,SCR,Tunisian Spring (KY),,-------------------------------------Scratched-------------------------------------,5/2,,
+18,9,9,Riddle Solver (KY),,4/G,L,"$80,000"
+18,10,10,Gamblers Tail (KY),,4/C,L,"$80,000"
+18,11,11,Indy Magic (KY),,4/G,L,"$80,000"
+19,SCR,Sight (KY),,-------------------------------------Scratched-------------------------------------,12/1,,
+19,3,3,Goldbrick (KY),,4/G,L,"$80,000"
+19,4,4,Standard of Proof (KY),,5/G,L,"$80,000"
+19,5,5,Trade Imbalance (KY),,4/C,L,"$80,000"
+19,6,6,Frosty Indulgence (KY),,4/G,L,"$80,000"
+19,7,7,Honest Al (KY),,4/C,L,"$80,000"
+19,SCR,Tunisian Spring (KY),,-------------------------------------Scratched-------------------------------------,5/2,,
+19,9,9,Riddle Solver (KY),,4/G,L,"$80,000"
+19,10,10,Gamblers Tail (KY),,4/C,L,"$80,000"
+19,11,11,Indy Magic (KY),,4/G,L,"$80,000"
+23,2,2,Conquering Cat (KY),,3/C,L,L   Saez
+23,3,3,Solid Left (KY),,3/C,L,F   Prat
+23,4,4,El Cordobes (KY),,3/C,,A   Calleja
+23,5,5,Ready for Peace (KY),,3/C,L,V   Cheminaud
+23,SCR,Master of Light (KY),,------------------------------------Scratched-------------------------------------,30/1,,
+23,7,7,Mesero (KY),,3/C,L,C J Lanerie
+23,8,8,Sing Sing (KY),,3/G,L,"I   Ortiz, Jr."
+23,9,9,Assertiveness (KY),,3/C,L,J R Velazquez
+23,10,10,States' Rights (VA),,3/C,L,J L Ortiz
+23,11,11,Warlander (KY),,3/C,L,J   Rosario
+23,12,12,Mika (KY),,3/C,L,J A Torres
+23,13,13,After Taxes (IRE),,3/G,L,J R Velazquez
+23,SCR,Spinback (KY),,------------------------------------Scratched-------------------------------------,30/1,,
+23,SCR,Chris's Revenge (KY),,------------------------------------Scratched-------------------------------------,20/1,,
+24,2,2,Conquering Cat (KY),,3/C,L,L   Saez
+24,3,3,Solid Left (KY),,3/C,L,F   Prat
+24,4,4,El Cordobes (KY),,3/C,,A   Calleja
+24,5,5,Ready for Peace (KY),,3/C,L,V   Cheminaud
+24,SCR,Master of Light (KY),,------------------------------------Scratched-------------------------------------,30/1,,
+24,7,7,Mesero (KY),,3/C,L,C J Lanerie
+24,8,8,Sing Sing (KY),,3/G,L,"I   Ortiz, Jr."
+24,9,9,Assertiveness (KY),,3/C,L,J R Velazquez
+24,10,10,States' Rights (VA),,3/C,L,J L Ortiz
+24,11,11,Warlander (KY),,3/C,L,J   Rosario
+24,12,12,Mika (KY),,3/C,L,J A Torres
+24,13,13,After Taxes (IRE),,3/G,L,J R Velazquez
+24,SCR,Spinback (KY),,------------------------------------Scratched-------------------------------------,30/1,,
+24,SCR,Chris's Revenge (KY),,------------------------------------Scratched-------------------------------------,20/1,,
+28,2,2,Deer District (KY),,5/G,L,$0
+28,3,3,Speak Easy (KY),,4/C,L,$0
+28,4,4,Discreet Mischief (KY),,4/C,L,$0
+28,5,5,Harrodsburg (KY),,5/G,L,$0
+28,SCR,Wico (IRE),,-------------------------------------Scratched-------------------------------------,4/1,,
+28,7,7,Code Omaha (KY),,4/C,L,$0
+28,8,8,Eye Witness (NY),,5/H,L,"$80,000"
+28,9,9,Call Me Andy (MD),,4/G,L,$0
+29,2,2,Deer District (KY),,5/G,L,$0
+29,3,3,Speak Easy (KY),,4/C,L,$0
+29,4,4,Discreet Mischief (KY),,4/C,L,$0
+29,5,5,Harrodsburg (KY),,5/G,L,$0
+29,SCR,Wico (IRE),,-------------------------------------Scratched-------------------------------------,4/1,,
+29,7,7,Code Omaha (KY),,4/C,L,$0
+29,8,8,Eye Witness (NY),,5/H,L,"$80,000"
+29,9,9,Call Me Andy (MD),,4/G,L,$0
+33,2,2,Fact (KY),,3/G,L,"I   Ortiz, Jr."
+33,3,3,Chambers (KY),,3/G,L,A   Beschizza
+33,4,4,Discerning Spirit (KY),,3/G,,L   Sosa
+33,5,5,Baker Hayfield (KY),,3/C,L,G   Saez
+33,6,6,Bourbon Flight (KY),,3/C,L,J   Rosario
+33,7,7,Big Truzz (KY),,3/C,L,L   Saez
+33,8,8,Zandvoort (KY),,3/C,L,J L Ortiz
+33,9,9,Vex (KY),,3/G,L,L   Machado
+33,10,10,Nantucket (KY),,3/C,L,M   Franco
+33,SCR,Sinister Smile (KY),,------------------------------------Scratched-------------------------------------,30/1,,
+33,12,12,Modus Bestia (MD),,3/C,L,R   Gutierrez
+34,2,2,Fact (KY),,3/G,L,"I   Ortiz, Jr."
+34,3,3,Chambers (KY),,3/G,L,A   Beschizza
+34,4,4,Discerning Spirit (KY),,3/G,,L   Sosa
+34,5,5,Baker Hayfield (KY),,3/C,L,G   Saez
+34,6,6,Bourbon Flight (KY),,3/C,L,J   Rosario
+34,7,7,Big Truzz (KY),,3/C,L,L   Saez
+34,8,8,Zandvoort (KY),,3/C,L,J L Ortiz
+34,9,9,Vex (KY),,3/G,L,L   Machado
+34,10,10,Nantucket (KY),,3/C,L,M   Franco
+34,SCR,Sinister Smile (KY),,------------------------------------Scratched-------------------------------------,30/1,,
+34,12,12,Modus Bestia (MD),,3/C,L,R   Gutierrez
+38,2,2,Always Forever (KY),,3/F,L,M   Franco
+38,3,3,Atomic City (KY),,3/F,L,L   Saez
+38,SCR,Romany Road (KY),,------------------------------------Scratched-------------------------------------,20/1,,
+38,5,5,Burning Pine (KY),,3/F,L,J   Rosario
+38,6,6,Precious Medley (KY),,3/F,L,A   Beschizza
+38,7,7,Dear Louise (KY),,3/F,L,B   Curtis
+38,8,8,Bessie Abott (IRE),,3/F,L,J L Ortiz
+38,9,9,Miss Lonelle (KY),,3/F,L,C J Lanerie
+38,10,10,Eunomia (KY),,3/F,L,J R Velazquez
+38,11,11,Al Jafara (GB),,3/F,L,F   Prat
+38,12,12,Birkin Girl (KY),,3/F,L,L   Machado
+38,SCR,Table Flirt (KY),,------------------------------------Scratched-------------------------------------,8/1,,
+38,14,14,Annelle (KY),,3/F,L,L   Saez
+38,SCR,Bonne Fille (KY),,------------------------------------Scratched-------------------------------------,30/1,,
+38,SCR,La Marinera (KY),,------------------------------------Scratched-------------------------------------,30/1,,
+39,2,2,Always Forever (KY),,3/F,L,M   Franco
+39,3,3,Atomic City (KY),,3/F,L,L   Saez
+39,SCR,Romany Road (KY),,------------------------------------Scratched-------------------------------------,20/1,,
+39,5,5,Burning Pine (KY),,3/F,L,J   Rosario
+39,6,6,Precious Medley (KY),,3/F,L,A   Beschizza
+39,7,7,Dear Louise (KY),,3/F,L,B   Curtis
+39,8,8,Bessie Abott (IRE),,3/F,L,J L Ortiz
+39,9,9,Miss Lonelle (KY),,3/F,L,C J Lanerie
+39,10,10,Eunomia (KY),,3/F,L,J R Velazquez
+39,11,11,Al Jafara (GB),,3/F,L,F   Prat
+39,12,12,Birkin Girl (KY),,3/F,L,L   Machado
+39,SCR,Table Flirt (KY),,------------------------------------Scratched-------------------------------------,8/1,,
+39,14,14,Annelle (KY),,3/F,L,L   Saez
+39,SCR,Bonne Fille (KY),,------------------------------------Scratched-------------------------------------,30/1,,
+39,SCR,La Marinera (KY),,------------------------------------Scratched-------------------------------------,30/1,,
+43,2,2,Bracket Buster (KY),,3/C,,M   Franco
+43,3,3,Bullard (KY),,3/C,,U   Rispoli
+43,SCR,Rolando (KY),,------------------------------------Scratched-------------------------------------,6/1,,
+43,5,5,Native Runner (KY),,3/C,,J L Ortiz
+43,6,6,Gosger (KY),,3/C,,"I   Ortiz, Jr."
+43,7,7,Praetor (KY),,3/C,,F   Prat
+43,8,8,Hypnus (KY),,3/C,,L   Saez
+43,SCR,Touchy (KY),,------------------------------------Scratched-------------------------------------,8/1,,
+44,2,2,Bracket Buster (KY),,3/C,,M   Franco
+44,3,3,Bullard (KY),,3/C,,U   Rispoli
+44,SCR,Rolando (KY),,------------------------------------Scratched-------------------------------------,6/1,,
+44,5,5,Native Runner (KY),,3/C,,J L Ortiz
+44,6,6,Gosger (KY),,3/C,,"I   Ortiz, Jr."
+44,7,7,Praetor (KY),,3/C,,F   Prat
+44,8,8,Hypnus (KY),,3/C,,L   Saez
+44,SCR,Touchy (KY),,------------------------------------Scratched-------------------------------------,8/1,,
+48,2,2,Choisya (GB),,5/M,,L   Saez
+48,3,3,Poolside With Slim (IRE),,4/F,,J L Ortiz
+48,SCR,Vina Arana (IRE),,------------------------------------Scratched-------------------------------------,30/1,,
+48,5,5,Be Your Best (IRE),,5/M,,"I   Ortiz, Jr."
+48,6,6,Jabaara (IRE),,4/F,,J   Rosario
+48,7,7,Kehoe Beach (KY),,4/F,,L   Dettori
+48,8,8,Sacred Wish (KY),,5/M,,J R Velazquez
+48,9,9,No Show Sammy Jo (GB),,5/M,,M   Franco
+49,2,2,Choisya (GB),,5/M,,L   Saez
+49,3,3,Poolside With Slim (IRE),,4/F,,J L Ortiz
+49,SCR,Vina Arana (IRE),,------------------------------------Scratched-------------------------------------,30/1,,
+49,5,5,Be Your Best (IRE),,5/M,,"I   Ortiz, Jr."
+49,6,6,Jabaara (IRE),,4/F,,J   Rosario
+49,7,7,Kehoe Beach (KY),,4/F,,L   Dettori
+49,8,8,Sacred Wish (KY),,5/M,,J R Velazquez
+49,9,9,No Show Sammy Jo (GB),,5/M,,M   Franco
+54,2,2,Autumn Rhythm (KY),,3/F,L,L   Saez
+54,3,3,My Buddy Brooks (KY),,3/F,,C A Emigh
+54,4,4,Spun Up (KY),,3/F,L,M   Murrill
+54,5,5,Aviso (KY),,3/F,L,C J Hernandez
+54,6,6,Madeline's Promise (KY),,3/F,L,C J Lanerie
+54,SCR,Talent Show (KY),,------------------------------------Scratched-------------------------------------,15/1,,
+54,8,8,Sherbini (KY),,3/F,L,"I   Ortiz, Jr."
+54,9,9,Baytown Butterfly (KY),,3/F,,A   Serpa
+54,10,10,Zaghruta (KY),,3/F,L,F   Prat
+54,11,11,Melle Mel (KY),,3/F,L,J L Ortiz
+54,12,12,Boutwell Time (KY),,3/F,L,J A Torres
+54,13,13,Black Ginger (KY),,3/F,L,A   Concepcion
+54,SCR,Spankerboom (KY),,------------------------------------Scratched-------------------------------------,20/1,,
+55,2,2,Autumn Rhythm (KY),,3/F,L,L   Saez
+55,3,3,My Buddy Brooks (KY),,3/F,,C A Emigh
+55,4,4,Spun Up (KY),,3/F,L,M   Murrill
+55,5,5,Aviso (KY),,3/F,L,C J Hernandez
+55,6,6,Madeline's Promise (KY),,3/F,L,C J Lanerie
+55,SCR,Talent Show (KY),,------------------------------------Scratched-------------------------------------,15/1,,
+55,8,8,Sherbini (KY),,3/F,L,"I   Ortiz, Jr."
+55,9,9,Baytown Butterfly (KY),,3/F,,A   Serpa
+55,10,10,Zaghruta (KY),,3/F,L,F   Prat
+55,11,11,Melle Mel (KY),,3/F,L,J L Ortiz
+55,12,12,Boutwell Time (KY),,3/F,L,J A Torres
+55,13,13,Black Ginger (KY),,3/F,L,A   Concepcion
+55,SCR,Spankerboom (KY),,------------------------------------Scratched-------------------------------------,20/1,,
