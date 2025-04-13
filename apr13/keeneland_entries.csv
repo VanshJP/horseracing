@@ -1,239 +1,91 @@
-race_number,post_position,horse_name,jockey,trainer,weight,medication,morning_line_odds
-3,2,2,Citizen (KY),,5/G,L,"$30,000"
-3,3,3,Diver (KY),,4/G,L,"$30,000"
-3,4,4,Ky Thirty Won (NY),,5/G,L,"$30,000"
-3,5,5,Pastero (KY),,3/G,L,"$30,000"
-3,6,6,Batter Up (KY),,3/G,L,"$30,000"
-3,7,7,Nash Potatoes (KY),,3/C,L,"$30,000"
-3,8,8,Flyin Ryan (KY),,3/G,L,"$30,000"
-3,SCR,Heatontap (KY),,-------------------------------------Scratched-------------------------------------,7/2,,
-4,2,2,Citizen (KY),,5/G,L,"$30,000"
-4,3,3,Diver (KY),,4/G,L,"$30,000"
-4,4,4,Ky Thirty Won (NY),,5/G,L,"$30,000"
-4,5,5,Pastero (KY),,3/G,L,"$30,000"
-4,6,6,Batter Up (KY),,3/G,L,"$30,000"
-4,7,7,Nash Potatoes (KY),,3/C,L,"$30,000"
-4,8,8,Flyin Ryan (KY),,3/G,L,"$30,000"
-4,SCR,Heatontap (KY),,-------------------------------------Scratched-------------------------------------,7/2,,
-8,2,2,Cape Trafalgar (KY),,6/H,L,"$40,000"
-8,3,3,Pure Panic (KY),,6/G,L,"$40,000"
-8,4,4,Willtorun (KY),,6/G,L,"$40,000"
-8,5,5,Tagliatelle (KY),,4/G,L,"$40,000"
-8,6,6,Mr Bob (KY),,5/H,L,"$40,000"
-8,SCR,Tenebris (KY),,-------------------------------------Scratched-------------------------------------,12/1,,
-8,8,8,Shape Note (KY),,4/G,L,"$40,000"
-8,9,9,Regal Rey (KY),,5/G,L,"$40,000"
-8,10,10,Refuah (NY),,6/G,L,"$40,000"
-9,2,2,Cape Trafalgar (KY),,6/H,L,"$40,000"
-9,3,3,Pure Panic (KY),,6/G,L,"$40,000"
-9,4,4,Willtorun (KY),,6/G,L,"$40,000"
-9,5,5,Tagliatelle (KY),,4/G,L,"$40,000"
-9,6,6,Mr Bob (KY),,5/H,L,"$40,000"
-9,SCR,Tenebris (KY),,-------------------------------------Scratched-------------------------------------,12/1,,
-9,8,8,Shape Note (KY),,4/G,L,"$40,000"
-9,9,9,Regal Rey (KY),,5/G,L,"$40,000"
-9,10,10,Refuah (NY),,6/G,L,"$40,000"
-13,2,2,Eyes On Italy (KY),,3/F,L,C J Hernandez
-13,3,3,Lilium (KY),,3/F,L,C   Barbosa
-13,4,4,Shrewd Operator (KY),,3/F,L,D   Cohen
-13,5,5,Double Velocity (ON),,3/F,L,J L Ortiz
-13,6,6,Isle Be Ready (KY),,3/F,L,J   Rosario
-13,7,7,Grove City Sunset (KY),,3/F,L,J R Velazquez
-13,8,8,Bea Trix (KY),,3/F,L,L   Dettori
-13,9,9,Theravada (KY),,3/F,L,L   Saez
-13,10,10,Good Game (KY),,3/F,L,F   Prat
-13,11,11,Wedding Mood (IRE),,3/F,L,"I   Ortiz, Jr."
-13,12,12,Super Maxima (KY),,3/F,,J   Riquelme
-13,SCR,Oak Alley (KY),,------------------------------------Scratched-------------------------------------,4/1,,
-13,SCR,McKinzie River (KY),,------------------------------------Scratched-------------------------------------,30/1,,
-13,SCR,Strive for Honor (KY),,------------------------------------Scratched-------------------------------------,6/1,,
-13,SCR,Bit of Frost (KY),,------------------------------------Scratched-------------------------------------,8/1,,
-14,2,2,Eyes On Italy (KY),,3/F,L,C J Hernandez
-14,3,3,Lilium (KY),,3/F,L,C   Barbosa
-14,4,4,Shrewd Operator (KY),,3/F,L,D   Cohen
-14,5,5,Double Velocity (ON),,3/F,L,J L Ortiz
-14,6,6,Isle Be Ready (KY),,3/F,L,J   Rosario
-14,7,7,Grove City Sunset (KY),,3/F,L,J R Velazquez
-14,8,8,Bea Trix (KY),,3/F,L,L   Dettori
-14,9,9,Theravada (KY),,3/F,L,L   Saez
-14,10,10,Good Game (KY),,3/F,L,F   Prat
-14,11,11,Wedding Mood (IRE),,3/F,L,"I   Ortiz, Jr."
-14,12,12,Super Maxima (KY),,3/F,,J   Riquelme
-14,SCR,Oak Alley (KY),,------------------------------------Scratched-------------------------------------,4/1,,
-14,SCR,McKinzie River (KY),,------------------------------------Scratched-------------------------------------,30/1,,
-14,SCR,Strive for Honor (KY),,------------------------------------Scratched-------------------------------------,6/1,,
-14,SCR,Bit of Frost (KY),,------------------------------------Scratched-------------------------------------,8/1,,
-18,SCR,Sight (KY),,-------------------------------------Scratched-------------------------------------,12/1,,
-18,3,3,Goldbrick (KY),,4/G,L,"$80,000"
-18,4,4,Standard of Proof (KY),,5/G,L,"$80,000"
-18,5,5,Trade Imbalance (KY),,4/C,L,"$80,000"
-18,6,6,Frosty Indulgence (KY),,4/G,L,"$80,000"
-18,7,7,Honest Al (KY),,4/C,L,"$80,000"
-18,SCR,Tunisian Spring (KY),,-------------------------------------Scratched-------------------------------------,5/2,,
-18,9,9,Riddle Solver (KY),,4/G,L,"$80,000"
-18,10,10,Gamblers Tail (KY),,4/C,L,"$80,000"
-18,11,11,Indy Magic (KY),,4/G,L,"$80,000"
-19,SCR,Sight (KY),,-------------------------------------Scratched-------------------------------------,12/1,,
-19,3,3,Goldbrick (KY),,4/G,L,"$80,000"
-19,4,4,Standard of Proof (KY),,5/G,L,"$80,000"
-19,5,5,Trade Imbalance (KY),,4/C,L,"$80,000"
-19,6,6,Frosty Indulgence (KY),,4/G,L,"$80,000"
-19,7,7,Honest Al (KY),,4/C,L,"$80,000"
-19,SCR,Tunisian Spring (KY),,-------------------------------------Scratched-------------------------------------,5/2,,
-19,9,9,Riddle Solver (KY),,4/G,L,"$80,000"
-19,10,10,Gamblers Tail (KY),,4/C,L,"$80,000"
-19,11,11,Indy Magic (KY),,4/G,L,"$80,000"
-23,2,2,Conquering Cat (KY),,3/C,L,L   Saez
-23,3,3,Solid Left (KY),,3/C,L,F   Prat
-23,4,4,El Cordobes (KY),,3/C,,A   Calleja
-23,5,5,Ready for Peace (KY),,3/C,L,V   Cheminaud
-23,SCR,Master of Light (KY),,------------------------------------Scratched-------------------------------------,30/1,,
-23,7,7,Mesero (KY),,3/C,L,C J Lanerie
-23,8,8,Sing Sing (KY),,3/G,L,"I   Ortiz, Jr."
-23,9,9,Assertiveness (KY),,3/C,L,J R Velazquez
-23,10,10,States' Rights (VA),,3/C,L,J L Ortiz
-23,11,11,Warlander (KY),,3/C,L,J   Rosario
-23,12,12,Mika (KY),,3/C,L,J A Torres
-23,13,13,After Taxes (IRE),,3/G,L,J R Velazquez
-23,SCR,Spinback (KY),,------------------------------------Scratched-------------------------------------,30/1,,
-23,SCR,Chris's Revenge (KY),,------------------------------------Scratched-------------------------------------,20/1,,
-24,2,2,Conquering Cat (KY),,3/C,L,L   Saez
-24,3,3,Solid Left (KY),,3/C,L,F   Prat
-24,4,4,El Cordobes (KY),,3/C,,A   Calleja
-24,5,5,Ready for Peace (KY),,3/C,L,V   Cheminaud
-24,SCR,Master of Light (KY),,------------------------------------Scratched-------------------------------------,30/1,,
-24,7,7,Mesero (KY),,3/C,L,C J Lanerie
-24,8,8,Sing Sing (KY),,3/G,L,"I   Ortiz, Jr."
-24,9,9,Assertiveness (KY),,3/C,L,J R Velazquez
-24,10,10,States' Rights (VA),,3/C,L,J L Ortiz
-24,11,11,Warlander (KY),,3/C,L,J   Rosario
-24,12,12,Mika (KY),,3/C,L,J A Torres
-24,13,13,After Taxes (IRE),,3/G,L,J R Velazquez
-24,SCR,Spinback (KY),,------------------------------------Scratched-------------------------------------,30/1,,
-24,SCR,Chris's Revenge (KY),,------------------------------------Scratched-------------------------------------,20/1,,
-28,2,2,Deer District (KY),,5/G,L,$0
-28,3,3,Speak Easy (KY),,4/C,L,$0
-28,4,4,Discreet Mischief (KY),,4/C,L,$0
-28,5,5,Harrodsburg (KY),,5/G,L,$0
-28,SCR,Wico (IRE),,-------------------------------------Scratched-------------------------------------,4/1,,
-28,7,7,Code Omaha (KY),,4/C,L,$0
-28,8,8,Eye Witness (NY),,5/H,L,"$80,000"
-28,9,9,Call Me Andy (MD),,4/G,L,$0
-29,2,2,Deer District (KY),,5/G,L,$0
-29,3,3,Speak Easy (KY),,4/C,L,$0
-29,4,4,Discreet Mischief (KY),,4/C,L,$0
-29,5,5,Harrodsburg (KY),,5/G,L,$0
-29,SCR,Wico (IRE),,-------------------------------------Scratched-------------------------------------,4/1,,
-29,7,7,Code Omaha (KY),,4/C,L,$0
-29,8,8,Eye Witness (NY),,5/H,L,"$80,000"
-29,9,9,Call Me Andy (MD),,4/G,L,$0
-33,2,2,Fact (KY),,3/G,L,"I   Ortiz, Jr."
-33,3,3,Chambers (KY),,3/G,L,A   Beschizza
-33,4,4,Discerning Spirit (KY),,3/G,,L   Sosa
-33,5,5,Baker Hayfield (KY),,3/C,L,G   Saez
-33,6,6,Bourbon Flight (KY),,3/C,L,J   Rosario
-33,7,7,Big Truzz (KY),,3/C,L,L   Saez
-33,8,8,Zandvoort (KY),,3/C,L,J L Ortiz
-33,9,9,Vex (KY),,3/G,L,L   Machado
-33,10,10,Nantucket (KY),,3/C,L,M   Franco
-33,SCR,Sinister Smile (KY),,------------------------------------Scratched-------------------------------------,30/1,,
-33,12,12,Modus Bestia (MD),,3/C,L,R   Gutierrez
-34,2,2,Fact (KY),,3/G,L,"I   Ortiz, Jr."
-34,3,3,Chambers (KY),,3/G,L,A   Beschizza
-34,4,4,Discerning Spirit (KY),,3/G,,L   Sosa
-34,5,5,Baker Hayfield (KY),,3/C,L,G   Saez
-34,6,6,Bourbon Flight (KY),,3/C,L,J   Rosario
-34,7,7,Big Truzz (KY),,3/C,L,L   Saez
-34,8,8,Zandvoort (KY),,3/C,L,J L Ortiz
-34,9,9,Vex (KY),,3/G,L,L   Machado
-34,10,10,Nantucket (KY),,3/C,L,M   Franco
-34,SCR,Sinister Smile (KY),,------------------------------------Scratched-------------------------------------,30/1,,
-34,12,12,Modus Bestia (MD),,3/C,L,R   Gutierrez
-38,2,2,Always Forever (KY),,3/F,L,M   Franco
-38,3,3,Atomic City (KY),,3/F,L,L   Saez
-38,SCR,Romany Road (KY),,------------------------------------Scratched-------------------------------------,20/1,,
-38,5,5,Burning Pine (KY),,3/F,L,J   Rosario
-38,6,6,Precious Medley (KY),,3/F,L,A   Beschizza
-38,7,7,Dear Louise (KY),,3/F,L,B   Curtis
-38,8,8,Bessie Abott (IRE),,3/F,L,J L Ortiz
-38,9,9,Miss Lonelle (KY),,3/F,L,C J Lanerie
-38,10,10,Eunomia (KY),,3/F,L,J R Velazquez
-38,11,11,Al Jafara (GB),,3/F,L,F   Prat
-38,12,12,Birkin Girl (KY),,3/F,L,L   Machado
-38,SCR,Table Flirt (KY),,------------------------------------Scratched-------------------------------------,8/1,,
-38,14,14,Annelle (KY),,3/F,L,L   Saez
-38,SCR,Bonne Fille (KY),,------------------------------------Scratched-------------------------------------,30/1,,
-38,SCR,La Marinera (KY),,------------------------------------Scratched-------------------------------------,30/1,,
-39,2,2,Always Forever (KY),,3/F,L,M   Franco
-39,3,3,Atomic City (KY),,3/F,L,L   Saez
-39,SCR,Romany Road (KY),,------------------------------------Scratched-------------------------------------,20/1,,
-39,5,5,Burning Pine (KY),,3/F,L,J   Rosario
-39,6,6,Precious Medley (KY),,3/F,L,A   Beschizza
-39,7,7,Dear Louise (KY),,3/F,L,B   Curtis
-39,8,8,Bessie Abott (IRE),,3/F,L,J L Ortiz
-39,9,9,Miss Lonelle (KY),,3/F,L,C J Lanerie
-39,10,10,Eunomia (KY),,3/F,L,J R Velazquez
-39,11,11,Al Jafara (GB),,3/F,L,F   Prat
-39,12,12,Birkin Girl (KY),,3/F,L,L   Machado
-39,SCR,Table Flirt (KY),,------------------------------------Scratched-------------------------------------,8/1,,
-39,14,14,Annelle (KY),,3/F,L,L   Saez
-39,SCR,Bonne Fille (KY),,------------------------------------Scratched-------------------------------------,30/1,,
-39,SCR,La Marinera (KY),,------------------------------------Scratched-------------------------------------,30/1,,
-43,2,2,Bracket Buster (KY),,3/C,,M   Franco
-43,3,3,Bullard (KY),,3/C,,U   Rispoli
-43,SCR,Rolando (KY),,------------------------------------Scratched-------------------------------------,6/1,,
-43,5,5,Native Runner (KY),,3/C,,J L Ortiz
-43,6,6,Gosger (KY),,3/C,,"I   Ortiz, Jr."
-43,7,7,Praetor (KY),,3/C,,F   Prat
-43,8,8,Hypnus (KY),,3/C,,L   Saez
-43,SCR,Touchy (KY),,------------------------------------Scratched-------------------------------------,8/1,,
-44,2,2,Bracket Buster (KY),,3/C,,M   Franco
-44,3,3,Bullard (KY),,3/C,,U   Rispoli
-44,SCR,Rolando (KY),,------------------------------------Scratched-------------------------------------,6/1,,
-44,5,5,Native Runner (KY),,3/C,,J L Ortiz
-44,6,6,Gosger (KY),,3/C,,"I   Ortiz, Jr."
-44,7,7,Praetor (KY),,3/C,,F   Prat
-44,8,8,Hypnus (KY),,3/C,,L   Saez
-44,SCR,Touchy (KY),,------------------------------------Scratched-------------------------------------,8/1,,
-48,2,2,Choisya (GB),,5/M,,L   Saez
-48,3,3,Poolside With Slim (IRE),,4/F,,J L Ortiz
-48,SCR,Vina Arana (IRE),,------------------------------------Scratched-------------------------------------,30/1,,
-48,5,5,Be Your Best (IRE),,5/M,,"I   Ortiz, Jr."
-48,6,6,Jabaara (IRE),,4/F,,J   Rosario
-48,7,7,Kehoe Beach (KY),,4/F,,L   Dettori
-48,8,8,Sacred Wish (KY),,5/M,,J R Velazquez
-48,9,9,No Show Sammy Jo (GB),,5/M,,M   Franco
-49,2,2,Choisya (GB),,5/M,,L   Saez
-49,3,3,Poolside With Slim (IRE),,4/F,,J L Ortiz
-49,SCR,Vina Arana (IRE),,------------------------------------Scratched-------------------------------------,30/1,,
-49,5,5,Be Your Best (IRE),,5/M,,"I   Ortiz, Jr."
-49,6,6,Jabaara (IRE),,4/F,,J   Rosario
-49,7,7,Kehoe Beach (KY),,4/F,,L   Dettori
-49,8,8,Sacred Wish (KY),,5/M,,J R Velazquez
-49,9,9,No Show Sammy Jo (GB),,5/M,,M   Franco
-54,2,2,Autumn Rhythm (KY),,3/F,L,L   Saez
-54,3,3,My Buddy Brooks (KY),,3/F,,C A Emigh
-54,4,4,Spun Up (KY),,3/F,L,M   Murrill
-54,5,5,Aviso (KY),,3/F,L,C J Hernandez
-54,6,6,Madeline's Promise (KY),,3/F,L,C J Lanerie
-54,SCR,Talent Show (KY),,------------------------------------Scratched-------------------------------------,15/1,,
-54,8,8,Sherbini (KY),,3/F,L,"I   Ortiz, Jr."
-54,9,9,Baytown Butterfly (KY),,3/F,,A   Serpa
-54,10,10,Zaghruta (KY),,3/F,L,F   Prat
-54,11,11,Melle Mel (KY),,3/F,L,J L Ortiz
-54,12,12,Boutwell Time (KY),,3/F,L,J A Torres
-54,13,13,Black Ginger (KY),,3/F,L,A   Concepcion
-54,SCR,Spankerboom (KY),,------------------------------------Scratched-------------------------------------,20/1,,
-55,2,2,Autumn Rhythm (KY),,3/F,L,L   Saez
-55,3,3,My Buddy Brooks (KY),,3/F,,C A Emigh
-55,4,4,Spun Up (KY),,3/F,L,M   Murrill
-55,5,5,Aviso (KY),,3/F,L,C J Hernandez
-55,6,6,Madeline's Promise (KY),,3/F,L,C J Lanerie
-55,SCR,Talent Show (KY),,------------------------------------Scratched-------------------------------------,15/1,,
-55,8,8,Sherbini (KY),,3/F,L,"I   Ortiz, Jr."
-55,9,9,Baytown Butterfly (KY),,3/F,,A   Serpa
-55,10,10,Zaghruta (KY),,3/F,L,F   Prat
-55,11,11,Melle Mel (KY),,3/F,L,J L Ortiz
-55,12,12,Boutwell Time (KY),,3/F,L,J A Torres
-55,13,13,Black Ginger (KY),,3/F,L,A   Concepcion
-55,SCR,Spankerboom (KY),,------------------------------------Scratched-------------------------------------,20/1,,
+race_number,race_type,purse,distance,distance_unit,course,surface,track_condition,weather,post_time,win_time,horse_name,breed,weight,age,sex,medication,program_num,post_position,finish,comment,jockey,trainer,owner,last_race_track,last_race_date,last_race_number,last_race_finish,track_code,track_name,race_date,dollar_odds,num_past_starts,num_past_wins,num_past_seconds,num_past_thirds
+1,,,,,,Dirt,,,,,Twirling Ridge,KY,119,2,Colt,,1,1,,,G Corrales,J A Hancock,,,,,,KEE,Keeneland,04/13/2025,,,,,
+1,,,,,,Dirt,,,,,Ohoopee,KY,116,2,Filly,,2,2,,,W A Rodriguez,W A Ward,,,,,,KEE,Keeneland,04/13/2025,,,,,
+1,,,,,,Dirt,,,,,Baytown Wonder,KY,119,2,Colt,,3,3,,,A Gomez,P McEntee,,,,,,KEE,Keeneland,04/13/2025,,,,,
+1,,,,,,Dirt,,,,,Mr. Vaggio,KY,119,2,Colt,,4,4,,,A Achard,J A Hancock,,,,,,KEE,Keeneland,04/13/2025,,,,,
+1,,,,,,Dirt,,,,,Talmadge,NY,119,2,Colt,,5,5,,,L Machado,J Ennis,,,,,,KEE,Keeneland,04/13/2025,,,,,
+1,,,,,,Dirt,,,,,Il Sorpasso,KY,119,2,Colt,,6,6,,,J Riquelme,L E Seglin,,,,,,KEE,Keeneland,04/13/2025,,,,,
+1,,,,,,Dirt,,,,,Baytown Triobloidi,KY,119,2,Colt,,7,7,,,A Serpa,P McEntee,,,,,,KEE,Keeneland,04/13/2025,,,,,
+1,,,,,,Dirt,,,,,Diblasi,FL,119,2,Colt,,8,8,,,J Rosario,W A Ward,,,,,,KEE,Keeneland,04/13/2025,,,,,
+2,,,,,,Dirt,,,,,Raising Kane,FL,118,3,Gelding,L,1,1,,,A Concepcion,J K Desormeaux,,,,,,KEE,Keeneland,04/13/2025,,,,,
+2,,,,,,Dirt,,,,,Lean Music Machine,KY,125,4,Gelding,L,2,2,,,L Saez,B A Lynch,,,,,,KEE,Keeneland,04/13/2025,,,,,
+2,,,,,,Dirt,,,,,Skyler,KY,125,5,Gelding,L,3,3,,,E Morales,E N Foster,,,,,,KEE,Keeneland,04/13/2025,,,,,
+2,,,,,,Dirt,,,,,How'ya Getting On,KY,118,3,Colt,L,4,4,,,J Meza,P Campos,,,,,,KEE,Keeneland,04/13/2025,,,,,
+2,,,,,,Dirt,,,,,Jack Rabbit,KY,125,4,Gelding,L,5,5,,,J A Torres,B Williamson,,,,,,KEE,Keeneland,04/13/2025,,,,,
+2,,,,,,Dirt,,,,,Bet On Bret,KY,118,3,Gelding,L,6,6,,,L Machado,G S Wismer,,,,,,KEE,Keeneland,04/13/2025,,,,,
+2,,,,,,Dirt,,,,,Aerate,KY,118,3,Colt,L,7,7,,,C J Lanerie,G R Arnold II,,,,,,KEE,Keeneland,04/13/2025,,,,,
+2,,,,,,Dirt,,,,,Heavy Hitter,KY,125,4,Gelding,L,8,8,,,F De La Cruz,H Hester,,,,,,KEE,Keeneland,04/13/2025,,,,,
+2,,,,,,Dirt,,,,,Captain Fancy,KY,1135,3,Colt,L,9,9,,,I Moncada,G D Foley,,,,,,KEE,Keeneland,04/13/2025,,,,,
+2,,,,,,Dirt,,,,,Memphis Slim,KY,118,3,Gelding,L,10,10,,,G Saez,T W Lucas,,,,,,KEE,Keeneland,04/13/2025,,,,,
+2,,,,,,Dirt,,,,,Stormproof,KY,125,4,Gelding,L,11,11,,,W A Rodriguez,W A Ward,,,,,,KEE,Keeneland,04/13/2025,,,,,
+3,,,,,,Dirt,,,,,Borrowed Time,KY,120,3,Colt,L,1,1,,,J Rosario,C A David,,,,,,KEE,Keeneland,04/13/2025,,,,,
+3,,,,,,Dirt,,,,,Rock It,KY,120,3,Colt,L,2,2,,,J L Ortiz,C DeVaux,,,,,,KEE,Keeneland,04/13/2025,,,,,
+3,,,,,,Dirt,,,,,Speedini,KY,1155,3,Colt,L,3,3,,,I Moncada,G D Foley,,,,,,KEE,Keeneland,04/13/2025,,,,,
+3,,,,,,Dirt,,,,,Proudly Hailed,GB,120,3,Colt,L,4,4,,,F Geroux,B H Cox,,,,,,KEE,Keeneland,04/13/2025,,,,,
+3,,,,,,Dirt,,,,,Nomolimbo,KY,120,3,Colt,,5,5,,,V Cheminaud,D Miller,,,,,,KEE,Keeneland,04/13/2025,,,,,
+3,,,,,,Dirt,,,,,Hard Circle,KY,120,3,Colt,L,6,6,,,J J Hernandez,M J Maker,,,,,,KEE,Keeneland,04/13/2025,,,,,
+3,,,,,,Dirt,,,,,Esmark,KY,120,3,Colt,L,7,7,,,J R Velazquez,V H Oliver,,,,,,KEE,Keeneland,04/13/2025,,,,,
+3,,,,,,Dirt,,,,,Global Prosperity,KY,120,3,Colt,L,8,8,,,A Beschizza,J M Antonucci,,,,,,KEE,Keeneland,04/13/2025,,,,,
+3,,,,,,Dirt,,,,,Dublin's Knight,IRE,120,3,Colt,L,9,9,,,"I Ortiz, Jr.",B P Walsh,,,,,,KEE,Keeneland,04/13/2025,,,,,
+3,,,,,,Dirt,,,,,Salamis,KY,120,3,Colt,L,10,10,,,F Prat,C C Brown,,,,,,KEE,Keeneland,04/13/2025,,,,,
+3,,,,,,Dirt,,,,,World Beater,KY,120,3,Colt,L,11,11,,,J A Torres,R Mott,,,,,,KEE,Keeneland,04/13/2025,,,,,
+3,,,,,,Dirt,,,,,Plensa,KY,120,3,Colt,L,12,12,,,L Saez,G R Arnold II,,,,,,KEE,Keeneland,04/13/2025,,,,,
+4,,,,,,Dirt,,,,,Simcoe,ON,1155,5,Gelding,L,1,1,,,I Moncada,K Vassilieva,,,,,,KEE,Keeneland,04/13/2025,,,,,
+4,,,,,,Dirt,,,,,Top Gunner,KY,118,8,Gelding,L,2,2,,,F Prat,B H Cox,,,,,,KEE,Keeneland,04/13/2025,,,,,
+4,,,,,,Dirt,,,,,Nova Rags,KY,118,7,Horse,L,3,3,,,"I Ortiz, Jr.",W I Mott,,,,,,KEE,Keeneland,04/13/2025,,,,,
+4,,,,,,Dirt,,,,,Otto the Conqueror,KY,118,4,Colt,L,4,4,,,J L Ortiz,S M Asmussen,,,,,,KEE,Keeneland,04/13/2025,,,,,
+4,,,,,,Dirt,,,,,Roll On Big Joe,FL,123,5,Gelding,L,5,5,,,U Rispoli,"R B Hess, Jr.",,,,,,KEE,Keeneland,04/13/2025,,,,,
+5,,,,,,Dirt,,,,,King of Gotham,NY,118,3,Gelding,L,1,1,,,L Machado,M P Sims,,,,,,KEE,Keeneland,04/13/2025,,,,,
+5,,,,,,Dirt,,,,,Venik,KY,118,3,Colt,L,2,2,,,L Saez,E Kenneally,,,,,,KEE,Keeneland,04/13/2025,,,,,
+5,,,,,,Dirt,,,,,Holster,KY,125,4,Colt,L,3,3,,,G Saez,L D Johnston,,,,,,KEE,Keeneland,04/13/2025,,,,,
+5,,,,,,Dirt,,,,,Spielman,KY,125,5,Gelding,L,4,4,,,A Concepcion,J K Desormeaux,,,,,,KEE,Keeneland,04/13/2025,,,,,
+5,,,,,,Dirt,,,,,Private Reserve,KY,118,3,Colt,L,5,5,,,F Geroux,B H Cox,,,,,,KEE,Keeneland,04/13/2025,,,,,
+5,,,,,,Dirt,,,,,Ghost Nation,KY,125,5,Gelding,L,6,6,,,M Gutierrez,P Matejka,,,,,,KEE,Keeneland,04/13/2025,,,,,
+5,,,,,,Dirt,,,,,Beechmont,KY,1135,3,Gelding,L,7,7,,,I Moncada,G D Foley,,,,,,KEE,Keeneland,04/13/2025,,,,,
+5,,,,,,Dirt,,,,,El Magnifico,KY,125,,,L,8,8,,,J L Ortiz,S M Asmussen,,,,,,KEE,Keeneland,04/13/2025,,,,,
+5,,,,,,Dirt,,,,,Name It,KY,125,4,Colt,L,9,9,,,"I Ortiz, Jr.",J J Toner,,,,,,KEE,Keeneland,04/13/2025,,,,,
+5,,,,,,Dirt,,,,,Secured Lender,KY,125,4,Gelding,L,10,10,,,F Prat,C C Brown,,,,,,KEE,Keeneland,04/13/2025,,,,,
+6,,,,,,Dirt,,,,,Mighty Mike,KY,120,3,Colt,,1,1,,,L Contreras,J A Kelley,,,,,,KEE,Keeneland,04/13/2025,,,,,
+6,,,,,,Dirt,,,,,Thirteen Colonies,KY,120,3,Colt,L,2,2,,,"I Ortiz, Jr.",P Antonacci,,,,,,KEE,Keeneland,04/13/2025,,,,,
+6,,,,,,Dirt,,,,,Lebowski,KY,120,3,Colt,L,3,3,,,J Rosario,S M Asmussen,,,,,,KEE,Keeneland,04/13/2025,,,,,
+6,,,,,,Dirt,,,,,A Bourbon for Toby,KY,120,3,Colt,L,4,4,,,"B J Hernandez, Jr.",T Morley,,,,,,KEE,Keeneland,04/13/2025,,,,,
+6,,,,,,Dirt,,,,,Zun Reyder,KY,120,3,Colt,L,5,5,,,S Doyle,M Nihei,,,,,,KEE,Keeneland,04/13/2025,,,,,
+6,,,,,,Dirt,,,,,Big Ritz,KY,120,3,Colt,L,6,6,,,J L Ortiz,G R Arnold II,,,,,,KEE,Keeneland,04/13/2025,,,,,
+6,,,,,,Dirt,,,,,Dr. Niko,KY,120,3,Gelding,L,7,7,,,A Concepcion,P A Bauer,,,,,,KEE,Keeneland,04/13/2025,,,,,
+6,,,,,,Dirt,,,,,Anew,KY,120,3,Colt,L,8,8,,,J R Velazquez,W Walden,,,,,,KEE,Keeneland,04/13/2025,,,,,
+6,,,,,,Dirt,,,,,Moon Channel,KY,120,3,Colt,L,9,9,,,F Geroux,B A Lynch,,,,,,KEE,Keeneland,04/13/2025,,,,,
+6,,,,,,Dirt,,,,,Executive,KY,120,3,Colt,L,10,10,,,F Prat,W I Mott,,,,,,KEE,Keeneland,04/13/2025,,,,,
+6,,,,,,Dirt,,,,,Money Man,KY,120,3,Colt,,11,11,,,D Cannon,D G Heath,,,,,,KEE,Keeneland,04/13/2025,,,,,
+6,,,,,,Dirt,,,,,Brushfire,KY,120,3,Colt,L,12,12,,,L Saez,M J Maker,,,,,,KEE,Keeneland,04/13/2025,,,,,
+7,,,,,,Dirt,,,,,Impel,KY,118,4,Filly,L,1,1,,,F Prat,B H Cox,,,,,,KEE,Keeneland,04/13/2025,,,,,
+7,,,,,,Dirt,,,,,Paynt Ya Later,WA,120,4,Filly,L,2,2,,,E A Roman,"E Moger, Jr.",,,,,,KEE,Keeneland,04/13/2025,,,,,
+7,,,,,,Dirt,,,,,Marmalade Skye,KY,118,5,Mare,L,3,3,,,"I Ortiz, Jr.",D Jacobson,,,,,,KEE,Keeneland,04/13/2025,,,,,
+7,,,,,,Dirt,,,,,Lotsandlotsofcandy,KY,118,4,Filly,L,4,4,,,"B J Hernandez, Jr.",P J McGee,,,,,,KEE,Keeneland,04/13/2025,,,,,
+7,,,,,,Dirt,,,,,Into Champagne,KY,118,4,Filly,L,5,5,,,J R Velazquez,I R Wilkes,,,,,,KEE,Keeneland,04/13/2025,,,,,
+7,,,,,,Dirt,,,,,Sing a Little Song,KY,118,4,Filly,L,6,6,,,C Landeros,I R Wilkes,,,,,,KEE,Keeneland,04/13/2025,,,,,
+7,,,,,,Dirt,,,,,Miss Enchanted,KY,118,4,Filly,L,7,7,,,C J Lanerie,D L Romans,,,,,,KEE,Keeneland,04/13/2025,,,,,
+7,,,,,,Dirt,,,,,Caumsett,NY,118,7,Mare,L,8,8,,,A Burgos,J Paye,,,,,,KEE,Keeneland,04/13/2025,,,,,
+7,,,,,,Dirt,,,,,Pleasant Embrace,FL,120,4,Filly,L,9,9,,,J Rosario,K J Breen,,,,,,KEE,Keeneland,04/13/2025,,,,,
+7,,,,,,Dirt,,,,,Easy Red,KY,118,4,Filly,L,10,10,,,L Saez,E Kenneally,,,,,,KEE,Keeneland,04/13/2025,,,,,
+8,,,,,,Dirt,,,,,B G Warrior,KY,122,5,Mare,,1,1,,,A Achard,R Brisset,,,,,,KEE,Keeneland,04/13/2025,,,,,
+8,,,,,,Dirt,,,,,Toupie,KY,124,4,Filly,,2,2,,,F Prat,H G Motion,,,,,,KEE,Keeneland,04/13/2025,,,,,
+8,,,,,,Dirt,,,,,Lithe Spirit,KY,122,4,Filly,,3,3,,,L Saez,S M Asmussen,,,,,,KEE,Keeneland,04/13/2025,,,,,
+8,,,,,,Dirt,,,,,Future Is Now,MD,124,5,Mare,,4,4,,,P Lopez,M J Trombetta,,,,,,KEE,Keeneland,04/13/2025,,,,,
+8,,,,,,Dirt,,,,,Awesome Treat,KY,122,7,Mare,,5,5,,,S Doyle,J Wojczynski,,,,,,KEE,Keeneland,04/13/2025,,,,,
+8,,,,,,Dirt,,,,,Danse Macabre,KY,122,5,Mare,,6,6,,,J Rosario,C Clement,,,,,,KEE,Keeneland,04/13/2025,,,,,
+8,,,,,,Dirt,,,,,Pandora's Gift,IRE,122,4,Filly,,7,7,,,"I Ortiz, Jr.",C Clement,,,,,,KEE,Keeneland,04/13/2025,,,,,
+8,,,,,,Dirt,,,,,Accomplished Girl,KY,122,5,Mare,,8,8,,,J L Ortiz,S M Asmussen,,,,,,KEE,Keeneland,04/13/2025,,,,,
+8,,,,,,Dirt,,,,,Get Twisted,KY,122,5,Mare,,9,9,,,S Sanjur,A Navarrete,,,,,,KEE,Keeneland,04/13/2025,,,,,
+8,,,,,,Dirt,,,,,Just a Care,IRE,122,5,Mare,,10,10,,,J R Velazquez,B A Lynch,,,,,,KEE,Keeneland,04/13/2025,,,,,
+9,,,,,,Dirt,,,,,Livehappy,KY,125,4,Gelding,L,1,1,,,C J Hernandez,J S Radosevich,,,,,,KEE,Keeneland,04/13/2025,,,,,
+9,,,,,,Dirt,,,,,Romantic Lead,KY,125,4,Gelding,L,2,2,,,L Saez,J J Toner,,,,,,KEE,Keeneland,04/13/2025,,,,,
+9,,,,,,Dirt,,,,,Desert Aire,KY,118,3,Colt,L,3,3,,,G Saez,M Puhich,,,,,,KEE,Keeneland,04/13/2025,,,,,
+9,,,,,,Dirt,,,,,Bourbon Street Boy,CA,118,3,Gelding,L,4,4,,,E Morales,W M Catalano,,,,,,KEE,Keeneland,04/13/2025,,,,,
+9,,,,,,Dirt,,,,,Hotline Blink,KY,118,3,Gelding,L,5,5,,,C Barbosa,M Chavez,,,,,,KEE,Keeneland,04/13/2025,,,,,
+9,,,,,,Dirt,,,,,Soco and Lime,KY,125,4,Colt,L,6,6,,,J A Torres,B Williamson,,,,,,KEE,Keeneland,04/13/2025,,,,,
+9,,,,,,Dirt,,,,,Maravich,KY,125,4,Gelding,L,7,7,,,J L Ortiz,S M Asmussen,,,,,,KEE,Keeneland,04/13/2025,,,,,
+9,,,,,,Dirt,,,,,Big Salt Lick,KY,125,5,Gelding,L,8,8,,,G Corrales,D F O'Neill,,,,,,KEE,Keeneland,04/13/2025,,,,,
+9,,,,,,Dirt,,,,,Hen Hen,KY,1205,4,Colt,L,9,9,,,I Moncada,G D Foley,,,,,,KEE,Keeneland,04/13/2025,,,,,
+9,,,,,,Dirt,,,,,Storm the Streets,KY,118,3,Gelding,L,10,10,,,"B J Hernandez, Jr.",I R Wilkes,,,,,,KEE,Keeneland,04/13/2025,,,,,
+9,,,,,,Dirt,,,,,Beck's Spirit,KY,118,3,Colt,L,11,11,,,C J Lanerie,D L Romans,,,,,,KEE,Keeneland,04/13/2025,,,,,
+9,,,,,,Dirt,,,,,Parade of Fears,KY,118,3,Gelding,L,12,12,,,J R Velazquez,W A Ward,,,,,,KEE,Keeneland,04/13/2025,,,,,
