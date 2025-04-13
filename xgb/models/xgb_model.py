@@ -76,30 +76,31 @@ def train_model(X_train, y_train, X_val=None, y_val=None):
     else:
         eval_set = [(dtrain, 'train')]
     
-    # Set XGBoost parameters optimized for horse racing prediction
+    # Set XGBoost parameters optimized for horse racing prediction with emphasis on odds
     params = {
         'objective': 'multi:softprob',  # Multi-class probability
         'num_class': 5,  # 1=win, 2=place, 3=show, 4=other, plus 0 for indexing
-        'max_depth': 8,  # Deeper trees to capture complex horse-condition interactions
-        'eta': 0.05,  # Lower learning rate for better generalization
-        'subsample': 0.8,  # Prevents overfitting
-        'colsample_bytree': 0.8,  # Prevents overfitting
-        'min_child_weight': 3,  # Avoids learning overly specific patterns
-        'gamma': 0.1,  # Minimum loss reduction for further partition
-        'alpha': 0.2,  # L1 regularization to encourage simple models
-        'lambda': 1.2,  # L2 regularization
+        'max_depth': 7,  # Less depth to avoid overfitting to longshots
+        'eta': 0.04,  # Slightly higher learning rate for more stable convergence
+        'subsample': 0.85,  # Higher subsample to reduce variance
+        'colsample_bytree': 0.8,  # Higher to include more features per tree
+        'min_child_weight': 4,  # Higher to be more conservative
+        'gamma': 0.1,  # Higher to require more information gain for splits
+        'alpha': 0.2,  # L1 regularization 
+        'lambda': 1.5,  # Higher L2 regularization to prefer simpler models
         'eval_metric': ['mlogloss', 'merror'],
-        'tree_method': 'hist'  # Fast algorithm for large datasets
+        'tree_method': 'hist',  # Fast algorithm for large datasets
+        'scale_pos_weight': 1.0,  # Balance positive/negative weights
     }
     
-    # Train the model
-    print("\nTraining XGBoost model on horse performance metrics...")
+    # Train the model with more emphasis on odd features
+    print("\nTraining XGBoost model with more emphasis on odds-related features...")
     model = xgb.train(
         params,
         dtrain,
-        num_boost_round=300,  # More boosting rounds for complex horse-condition relationships
+        num_boost_round=400,  # More boosting rounds for more detailed learning
         evals=eval_set,
-        early_stopping_rounds=30,
+        early_stopping_rounds=40,
         verbose_eval=20  # Print evaluation every 20 iterations
     )
     
@@ -174,21 +175,33 @@ def train_model(X_train, y_train, X_val=None, y_val=None):
     
     return model
 
-def predict_top_finishers(model, X, horse_names):
+def predict_top_finishers(model, X, horse_names, min_confidence=0.1):
     """
-    Predict the top 3 finishers for a race
+    Predict the top 5 finishers for a race
     
     Args:
         model: Trained XGBoost model
         X: Features for the race
         horse_names: List of horse names corresponding to the features
+        min_confidence: Minimum confidence threshold for predictions
         
     Returns:
-        List of (horse_name, probability) tuples for the top 3 predicted finishers
+        List of (horse_name, probability) tuples for the top 5 predicted finishers
     """
     # Identify ID columns that shouldn't be used for prediction
     id_cols = [col for col in X.columns if col in ['horse_name', 'race_date', 'track_code', 'race_number']]
     
+    # Extract key odds-related columns before dropping them
+    odds_data = {}
+    if 'dollar_odds' in X.columns:
+        odds_data['dollar_odds'] = X['dollar_odds'].tolist()
+    if 'odds_rank' in X.columns:
+        odds_data['odds_rank'] = X['odds_rank'].tolist()
+    if 'value_bet' in X.columns:
+        odds_data['value_bet'] = X['value_bet'].tolist()
+    if 'odds_ratio_to_avg' in X.columns:
+        odds_data['odds_ratio_to_avg'] = X['odds_ratio_to_avg'].tolist()
+        
     # Remove ID columns from prediction data
     X_pred = X.drop(id_cols, axis=1, errors='ignore')
     
@@ -219,10 +232,11 @@ def predict_top_finishers(model, X, horse_names):
     # Get predictions (probabilities for each class)
     predictions = model.predict(dtest)
     
-    # Extract probabilities for finishing 1st, 2nd, and 3rd
+    # Extract probabilities for finishing 1st through 5th
     first_probs = predictions[:, 1]  # Class 1 = finish 1st
     second_probs = predictions[:, 2]  # Class 2 = finish 2nd
-    third_probs = predictions[:, 3]  # Class 3 = finish 3rd
+    third_probs = predictions[:, 3]   # Class 3 = finish 3rd
+    fourth_probs = predictions[:, 4]  # Class 4 = finish 4th
     
     # Create a DataFrame with horses and their probabilities
     results = pd.DataFrame({
@@ -230,34 +244,152 @@ def predict_top_finishers(model, X, horse_names):
         'first_prob': first_probs,
         'second_prob': second_probs,
         'third_prob': third_probs,
-        'top3_prob': first_probs + second_probs + third_probs
+        'fourth_prob': fourth_probs,
+        'top4_prob': first_probs + second_probs + third_probs + fourth_probs
     })
     
-    # Determine the top 3 finishers using a sequential approach
-    top3 = []
-    remaining_horses = results.copy()
+    # Add odds-related information if available
+    if odds_data:
+        for key, values in odds_data.items():
+            if len(values) == len(results):
+                results[key] = values
     
-    # Find most likely winner (1st place)
+    # Calculate value scores (blend of probabilities and odds)
+    if 'dollar_odds' in results.columns:
+        # Adjust probabilities based on odds (favor horses with lower odds)
+        results['adjusted_first_prob'] = results['first_prob'] * (1 + 1/results['dollar_odds'].clip(1))
+        
+        # Value score with higher weight to favorites and lower weight to longshots
+        results['win_value_score'] = results['first_prob'] * (1/results['dollar_odds'].clip(1))
+        
+        # Conservative Kelly criterion with safety factor
+        results['kelly_value'] = (results['first_prob'] - (1.25 / results['dollar_odds'].clip(0.01))).clip(-1, 0.3)
+        
+        # Favorite indicator with higher impact
+        if 'odds_rank' in results.columns:
+            results['favorite_indicator'] = (results['odds_rank'] <= 3).astype(float) * 0.2
+            
+            # Apply favorite boost to first probability
+            results['first_prob'] = results['first_prob'] + results['favorite_indicator']
+            
+            # Apply longshot penalty
+            results['longshot_penalty'] = ((results['odds_rank'] >= results.shape[0] * 0.7) & 
+                                          (results['dollar_odds'] > 15)).astype(float) * 0.1
+            results['first_prob'] = (results['first_prob'] - results['longshot_penalty']).clip(0, 1)
+    
+    # Filter out horses with very low probability
+    filtered_results = results[results['top4_prob'] >= min_confidence]
+    
+    if filtered_results.empty:
+        print(f"Warning: No horses meet the minimum confidence threshold of {min_confidence}")
+        # Fall back to using all horses if none meet the threshold
+        filtered_results = results
+    
+    # Determine the top 5 finishers using a hybrid approach that favors favorites
+    top5 = []
+    remaining_horses = filtered_results.copy()
+    
+    # Calculate a combined score that favors horses with better odds (favorites)
+    if 'odds_rank' in remaining_horses.columns and 'dollar_odds' in remaining_horses.columns:
+        # Create a safety score (higher for favorites, lower for longshots)
+        remaining_horses['safety_score'] = (remaining_horses.shape[0] - remaining_horses['odds_rank']) / remaining_horses.shape[0]
+        
+        # Calculate combined score that balances probability and odds preference
+        # Higher weight (0.6) to model probabilities, lower weight (0.4) to odds-based safety
+        remaining_horses['win_combined_score'] = (0.6 * remaining_horses['first_prob']) + (0.4 * remaining_horses['safety_score'])
+        remaining_horses['place_combined_score'] = (0.6 * remaining_horses['second_prob']) + (0.4 * remaining_horses['safety_score'])
+        remaining_horses['show_combined_score'] = (0.6 * remaining_horses['third_prob']) + (0.4 * remaining_horses['safety_score'])
+        remaining_horses['fourth_combined_score'] = (0.6 * remaining_horses['fourth_prob']) + (0.4 * remaining_horses['safety_score'])
+    else:
+        # If no odds data, just use probabilities
+        remaining_horses['win_combined_score'] = remaining_horses['first_prob']
+        remaining_horses['place_combined_score'] = remaining_horses['second_prob']
+        remaining_horses['show_combined_score'] = remaining_horses['third_prob']
+        remaining_horses['fourth_combined_score'] = remaining_horses['fourth_prob']
+    
+    # Find most likely winner (1st place) using combined score
     if not remaining_horses.empty:
-        first_idx = remaining_horses['first_prob'].argmax()
+        first_idx = remaining_horses['win_combined_score'].argmax()
         first_horse = remaining_horses.iloc[first_idx]['horse_name']
         first_prob = remaining_horses.iloc[first_idx]['first_prob']
-        top3.append((first_horse, float(first_prob)))
+        horse_info = {'confidence': float(first_prob)}
+        
+        # Add odds info if available
+        for key in ['dollar_odds', 'odds_rank', 'win_value_score', 'kelly_value', 'value_bet']:
+            if key in remaining_horses.columns:
+                horse_info[key] = float(remaining_horses.iloc[first_idx][key])
+        
+        # Add safety score if available
+        if 'safety_score' in remaining_horses.columns:
+            horse_info['safety_score'] = float(remaining_horses.iloc[first_idx]['safety_score'])
+        
+        top5.append((first_horse, horse_info))
         remaining_horses = remaining_horses[remaining_horses['horse_name'] != first_horse]
     
-    # Find most likely second place finisher
+    # Find most likely second place finisher using combined score
     if not remaining_horses.empty:
-        second_idx = remaining_horses['second_prob'].argmax()
+        second_idx = remaining_horses['place_combined_score'].argmax()
         second_horse = remaining_horses.iloc[second_idx]['horse_name']
         second_prob = remaining_horses.iloc[second_idx]['second_prob']
-        top3.append((second_horse, float(second_prob)))
+        horse_info = {'confidence': float(second_prob)}
+        
+        # Add odds info and safety score if available
+        for key in ['dollar_odds', 'odds_rank', 'win_value_score', 'kelly_value', 'value_bet', 'safety_score']:
+            if key in remaining_horses.columns:
+                horse_info[key] = float(remaining_horses.iloc[second_idx][key])
+        
+        top5.append((second_horse, horse_info))
         remaining_horses = remaining_horses[remaining_horses['horse_name'] != second_horse]
     
-    # Find most likely third place finisher
+    # Find most likely third place finisher using combined score
     if not remaining_horses.empty:
-        third_idx = remaining_horses['third_prob'].argmax()
+        third_idx = remaining_horses['show_combined_score'].argmax()
         third_horse = remaining_horses.iloc[third_idx]['horse_name']
         third_prob = remaining_horses.iloc[third_idx]['third_prob']
-        top3.append((third_horse, float(third_prob)))
+        horse_info = {'confidence': float(third_prob)}
+        
+        # Add odds info and safety score if available
+        for key in ['dollar_odds', 'odds_rank', 'win_value_score', 'kelly_value', 'value_bet', 'safety_score']:
+            if key in remaining_horses.columns:
+                horse_info[key] = float(remaining_horses.iloc[third_idx][key])
+        
+        top5.append((third_horse, horse_info))
+        remaining_horses = remaining_horses[remaining_horses['horse_name'] != third_horse]
     
-    return top3 
+    # Find most likely fourth place finisher using combined score
+    if not remaining_horses.empty:
+        fourth_idx = remaining_horses['fourth_combined_score'].argmax()
+        fourth_horse = remaining_horses.iloc[fourth_idx]['horse_name']
+        fourth_prob = remaining_horses.iloc[fourth_idx]['fourth_prob']
+        horse_info = {'confidence': float(fourth_prob)}
+        
+        # Add odds info and safety score if available
+        for key in ['dollar_odds', 'odds_rank', 'win_value_score', 'kelly_value', 'value_bet', 'safety_score']:
+            if key in remaining_horses.columns:
+                horse_info[key] = float(remaining_horses.iloc[fourth_idx][key])
+        
+        top5.append((fourth_horse, horse_info))
+        remaining_horses = remaining_horses[remaining_horses['horse_name'] != fourth_horse]
+    
+    # For fifth place, blend remaining probability with safety factors
+    if not remaining_horses.empty:
+        # For fifth place, give even higher weight to favorites
+        if 'safety_score' in remaining_horses.columns:
+            remaining_horses['fifth_combined_score'] = (0.5 * remaining_horses['top4_prob']) + (0.5 * remaining_horses['safety_score'])
+            fifth_idx = remaining_horses['fifth_combined_score'].argmax()
+        else:
+            # Fallback to just using probability
+            fifth_idx = remaining_horses['top4_prob'].argmax()
+            
+        fifth_horse = remaining_horses.iloc[fifth_idx]['horse_name']
+        fifth_prob = remaining_horses.iloc[fifth_idx]['top4_prob']
+        horse_info = {'confidence': float(fifth_prob)}
+        
+        # Add odds info and safety score if available
+        for key in ['dollar_odds', 'odds_rank', 'win_value_score', 'kelly_value', 'value_bet', 'safety_score']:
+            if key in remaining_horses.columns:
+                horse_info[key] = float(remaining_horses.iloc[fifth_idx][key])
+        
+        top5.append((fifth_horse, horse_info))
+    
+    return top5 

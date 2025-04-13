@@ -1,4 +1,6 @@
 race_date,track_code,race_number,predicted_position,horse_name,confidence
-2025-04-13,KEE,1,1,Baytown Triobloidi,8.484143472742289e-05
-2025-04-13,KEE,1,2,Ohoopee,0.00012760581739712507
-2025-04-13,KEE,1,3,Diblasi,0.9989365935325623
+2025-04-13,KEE,1,1,Diblasi,"{'confidence': 0.20007405269570883, 'dollar_odds': 1.8, 'odds_rank': 1.0, 'win_value_score': 4.114038650489723e-05, 'kelly_value': -0.6943703917487356, 'value_bet': 0.0, 'safety_score': 0.8}"
+2025-04-13,KEE,1,2,Ohoopee,"{'confidence': 6.153748836368322e-05, 'dollar_odds': 4.5, 'odds_rank': 2.0, 'win_value_score': 1.4865942325236068e-05, 'kelly_value': -0.27771088103731423, 'value_bet': 0.0, 'safety_score': 0.6}"
+2025-04-13,KEE,1,3,Twirling Ridge,"{'confidence': 0.9998227953910828, 'dollar_odds': 9.0, 'odds_rank': 3.0, 'win_value_score': 6.8542414939858845e-06, 'kelly_value': -0.13882720071544302, 'value_bet': 0.0, 'safety_score': 0.4}"
+2025-04-13,KEE,1,4,Baytown Triobloidi,"{'confidence': 5.662508920067921e-05, 'dollar_odds': 21.0, 'odds_rank': 4.0, 'win_value_score': 3.057122826465361e-06, 'kelly_value': -0.05945960994445375, 'value_bet': 0.0, 'safety_score': 0.2}"
+2025-04-13,KEE,1,5,Il Sorpasso,"{'confidence': 0.9999857544898987, 'dollar_odds': 31.0, 'odds_rank': 5.0, 'win_value_score': 1.8916576781550481e-06, 'kelly_value': -0.04026393925713848, 'value_bet': 0.0, 'safety_score': 0.0}"

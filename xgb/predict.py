@@ -7,6 +7,7 @@ import xgboost as xgb
 from utils.data_processing import preprocess_data, engineer_features
 from utils.evaluation import calculate_score, track_performance
 from models.xgb_model import train_model, predict_top_finishers
+import argparse
 
 # Define constants for file paths
 DATA_DIR = 'data'
@@ -141,40 +142,45 @@ def main():
         print("Analyzing horses' past performance in conditions similar to test races...")
         feature_test = engineer_features(processed_test, historical_data=processed_data, is_training=False)
         
-        # Filter for only race 1
-        race1_data = feature_test[feature_test['race_number'] == 1]
+        # Filter for specific test race if requested
+        if args.race:
+            print(f"Making predictions for race {args.race} only...")
+            test_df = feature_test[feature_test['race_number'] == args.race]
+        else:
+            print("Making predictions for race 5 only...")
+            test_df = feature_test[feature_test['race_number'] == 5]
         
-        if race1_data.empty:
-            print("\nNo data found for race 1 in the test data!")
+        if test_df.empty:
+            print("\nNo data found for the specified race!")
         else:
             # Group by race
-            race_groups = race1_data.groupby(['race_date', 'track_code', 'race_number'], observed=True)
+            race_groups = test_df.groupby(['race_date', 'track_code', 'race_number'], observed=True)
             
             # Make predictions for each race
-            print("\nMaking predictions for race 1 only...")
+            print("\nMaking predictions for the specified race...")
             all_predictions = []
             
-            for (race_date, track_code, race_num), race_df in race_groups:
+            for (race_date, track_code, race_num), race_group in race_groups:
                 race_id = f"{track_code} - {race_date} - Race {race_num}"
                 print(f"\nPredicting for {race_id}")
                 
                 # Get race conditions
                 conditions = {}
-                if 'surface' in race_df.columns:
-                    conditions['Surface'] = race_df['surface'].iloc[0]
-                if 'track_condition' in race_df.columns:
-                    conditions['Track Condition'] = race_df['track_condition'].iloc[0]
-                if 'distance' in race_df.columns:
-                    conditions['Distance'] = race_df['distance'].iloc[0]
+                if 'surface' in race_group.columns:
+                    conditions['Surface'] = race_group['surface'].iloc[0]
+                if 'track_condition' in race_group.columns:
+                    conditions['Track Condition'] = race_group['track_condition'].iloc[0]
+                if 'distance' in race_group.columns:
+                    conditions['Distance'] = race_group['distance'].iloc[0]
                 
                 print("Race conditions:", ", ".join([f"{k}: {v}" for k, v in conditions.items()]))
                 
                 # Get horse names for this race
-                horse_names = race_df['horse_name'].tolist()
+                horse_names = race_group['horse_name'].tolist()
                 print(f"Horses in this race: {', '.join(horse_names)}")
                 
                 # Prepare race data for prediction - use the same columns as training
-                race_X = race_df[X.columns.intersection(race_df.columns)]
+                race_X = race_group[X.columns.intersection(race_group.columns)]
                 
                 # Check for missing columns and add them with default values
                 for col in X.columns:
@@ -184,51 +190,81 @@ def main():
                 # Ensure same column order as training data
                 race_X = race_X[X.columns]
                 
-                # Get top 3 predictions
-                predictions = predict_top_finishers(model, race_X, horse_names)
+                # Get top 5 predictions
+                predictions = predict_top_finishers(model, race_X, horse_names, min_confidence=0.1)
                 
-                print(f"Top 3 predictions for {race_id}:")
-                for i, (horse, prob) in enumerate(predictions):
-                    print(f"{i+1}. {horse} (confidence: {prob:.2f})")
+                # Print top 5 predictions
+                print(f"\nTop 5 predictions for {race_id}:")
+                print()
+                
+                for i, (horse, horse_info) in enumerate(predictions, 1):
+                    if isinstance(horse_info, dict):
+                        confidence = horse_info.get('confidence', 0) * 100
+                        print(f"{i}. {horse} (confidence: {confidence:.2f}%)")
+                        
+                        # Display odds-related information
+                        key_factors = []
+                        if 'jockey_win_rate' in race_group.columns:
+                            horse_row = race_group[race_group['horse_name'] == horse]
+                            if not horse_row.empty:
+                                if 'jockey_win_rate' in horse_row.columns:
+                                    jockey_win = horse_row['jockey_win_rate'].values[0] * 100
+                                    key_factors.append(f"Jockey win rate: {jockey_win:.2f}%")
+                                if 'days_since_last_race' in horse_row.columns:
+                                    days = horse_row['days_since_last_race'].values[0]
+                                    key_factors.append(f"Days since last race: {days}")
+                                if 'post_position' in horse_row.columns:
+                                    post = horse_row['post_position'].values[0]
+                                    key_factors.append(f"Post position: {post}")
+                                    
+                        # Add odds-related factors
+                        if 'dollar_odds' in horse_info:
+                            key_factors.append(f"Odds: {horse_info['dollar_odds']:.2f}")
+                        if 'odds_rank' in horse_info:
+                            key_factors.append(f"Odds rank: {horse_info['odds_rank']:.0f}")
+                        if 'safety_score' in horse_info:
+                            safety = horse_info['safety_score'] * 100
+                            key_factors.append(f"Safety score: {safety:.1f}%")
+                        if 'win_value_score' in horse_info:
+                            key_factors.append(f"Value score: {horse_info['win_value_score']:.2f}")
+                        if 'kelly_value' in horse_info:
+                            kelly = horse_info['kelly_value'] * 100
+                            key_factors.append(f"Kelly value: {kelly:.2f}%")
+                            
+                        # Add bet recommendation based on odds rank and safety
+                        if 'odds_rank' in horse_info and 'safety_score' in horse_info:
+                            if horse_info['odds_rank'] <= 3 and horse_info['safety_score'] > 0.7:
+                                key_factors.append("RECOMMENDATION: Safe bet")
+                            elif horse_info['odds_rank'] <= 4 and horse_info['safety_score'] > 0.5:
+                                key_factors.append("RECOMMENDATION: Moderate risk")
+                            elif horse_info['odds_rank'] > 5:
+                                key_factors.append("RECOMMENDATION: Higher risk")
+                        
+                        if key_factors:
+                            print(f"   Key factors: {', '.join(key_factors)}")
+                    else:
+                        # Handle old format where horse_info is just confidence value
+                        confidence = horse_info * 100 
+                        print(f"{i}. {horse} (confidence: {confidence:.2f}%)")
+                        
+                        # Still try to show key factors from race data
+                        if 'jockey_win_rate' in race_group.columns:
+                            horse_row = race_group[race_group['horse_name'] == horse]
+                            if not horse_row.empty:
+                                key_factors = []
+                                if 'jockey_win_rate' in horse_row.columns:
+                                    jockey_win = horse_row['jockey_win_rate'].values[0] * 100
+                                    key_factors.append(f"Jockey win rate: {jockey_win:.2f}%")
+                                if 'days_since_last_race' in horse_row.columns:
+                                    days = horse_row['days_since_last_race'].values[0]
+                                    key_factors.append(f"Days since last race: {days}")
+                                if 'post_position' in horse_row.columns:
+                                    post = horse_row['post_position'].values[0]
+                                    key_factors.append(f"Post position: {post}")
+                                if key_factors:
+                                    print(f"   Key factors: {', '.join(key_factors)}")
                     
-                    # Find key performance stats for this horse
-                    horse_row = race_df[race_df['horse_name'] == horse]
-                    if not horse_row.empty:
-                        # Show why this horse was selected (key performance indicators)
-                        key_metrics = []
-                        
-                        # Overall performance
-                        if 'win_rate' in horse_row.columns:
-                            win_rate = horse_row['win_rate'].iloc[0]
-                            if win_rate > 0:
-                                key_metrics.append(f"Win rate: {win_rate:.2f}")
-                        
-                        # Surface-specific performance
-                        if conditions.get('Surface') and f"surface_win_rate_{conditions['Surface']}".lower() in horse_row.columns:
-                            surface_win = horse_row[f"surface_win_rate_{conditions['Surface']}".lower()].iloc[0]
-                            if surface_win > 0:
-                                key_metrics.append(f"Win rate on {conditions['Surface']}: {surface_win:.2f}")
-                        
-                        # Track condition performance
-                        if conditions.get('Track Condition') and f"condition_win_rate_{conditions['Track Condition']}".lower() in horse_row.columns:
-                            condition_win = horse_row[f"condition_win_rate_{conditions['Track Condition']}".lower()].iloc[0]
-                            if condition_win > 0:
-                                key_metrics.append(f"Win rate in {conditions['Track Condition']} conditions: {condition_win:.2f}")
-                        
-                        # Jockey performance
-                        if 'jockey_win_rate' in horse_row.columns:
-                            jockey_win = horse_row['jockey_win_rate'].iloc[0]
-                            if jockey_win > 0:
-                                key_metrics.append(f"Jockey win rate: {jockey_win:.2f}")
-                        
-                        # Recent form
-                        if 'recent_win_rate' in horse_row.columns:
-                            recent_win = horse_row['recent_win_rate'].iloc[0]
-                            if recent_win > 0:
-                                key_metrics.append(f"Recent win rate: {recent_win:.2f}")
-                        
-                        if key_metrics:
-                            print(f"   Key factors: {', '.join(key_metrics)}")
+                    print()
                 
                 race_result = {
                     'race_date': race_date,
@@ -269,4 +305,7 @@ def main():
     print(f"Feature list saved to {features_path}")
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Predict horse positions using XGBoost")
+    parser.add_argument("--race", type=int, help="Specify the race number to predict")
+    args = parser.parse_args()
     main() 
